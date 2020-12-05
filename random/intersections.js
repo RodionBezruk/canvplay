@@ -17,13 +17,17 @@ const sketch = () => {
       return arr;
     }
     context.lineWidth = 0.1;
-    for (let i = 0; i <= 10; i++) {
-      for (let j = 0; j <= 10; j++) {
+    for (let i = 0; i <= 20; i++) {
+      for (let j = 0; j <= 20; j++) {
         let random1 = random()[0];
         let random2 = random()[1];
         context.beginPath();
         context.moveTo(random1, random2);
-        context.lineTo(random1 - 1, random2 + 1);
+        if (i % 2 == 0) {
+          context.lineTo(random1 - 1, random2 + 1);
+        } else {
+          context.lineTo(random1 + 1, random2 + 1);
+        }
         context.stroke();
       }
     }
