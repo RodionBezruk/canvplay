@@ -6,7 +6,6 @@ const settings = {
 };
 const sketch = () => {
   return ({ context, width, height }) => {
-    const margin = 1 / 4;
     context.fillStyle = 'hsl(0, 0%, 98%)';
     context.fillRect(0, 0, width, height);
     function random() {
